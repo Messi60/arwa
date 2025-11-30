@@ -1,0 +1,570 @@
+
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Fly_To </title>
+  <style>
+    /* ====== RESET & BASE ====== */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family: "Segoe UI", Tahoma, Arial, "Helvetica Neue", sans-serif;background:linear-gradient(180deg,#f7fbff,#ffffff);color:#0b1a2b;line-height:1.45}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+
+    /* ====== LAYOUT ====== */
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{background:#0c3b66;color:#fff;padding:18px 0;border-radius:12px}
+    .nav{display:flex;gap:20px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#ffb348,#ff6b6b);display:flex;align-items:center;justify-content:center;font-weight:700;color:#102a43}
+    nav ul{display:flex;gap:12px;list-style:none}
+    nav a{padding:8px 12px;border-radius:8px;transition:background .2s}
+    nav a:hover{background:rgba(255,255,255,0.08)}
+
+    /* ====== HERO ====== */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:30px 0}
+    .hero .title{font-size:28px;font-weight:700}
+    .hero p{opacity:.95}
+    .cta{margin-top:12px;display:inline-block;background:#ffcf66;color:#082033;padding:10px 16px;border-radius:10px;font-weight:600}
+
+    /* ====== SECTIONS ====== */
+    section{margin:28px 0;padding:18px;background:rgba(12,59,102,0.03);border-radius:12px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:#fff;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(12,59,102,0.06);min-height:120px}
+    .card h3{margin-bottom:8px;font-size:16px;color:#07203a}
+    .muted{color:#27465a;font-size:14px}
+
+    /* ====== SAFETY BLOCK (4 elements) ====== */
+    .safety-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .safety-item{background:linear-gradient(180deg,#ffffff,#f4fbff);padding:14px;border-radius:10px;border:1px solid rgba(6,34,56,0.05)}
+    .safety-item h4{margin-bottom:6px}
+
+    /* ====== FLEET ====== */
+    .fleet{display:flex;gap:12px;flex-wrap:wrap}
+    .plane{flex:1 1 220px;background:#fff;padding:12px;border-radius:10px;box-shadow:0 4px 10px rgba(2,20,34,0.05)}
+
+    /* ====== CONTACT FORM (no JS) ====== */
+    form{display:grid;gap:10px}
+    input,textarea,select{padding:10px;border:1px solid #d6e6f2;border-radius:8px;font-size:14px}
+    button{background:#0c3b66;color:#fff;padding:10px;border-radius:10px;border:none;font-weight:600;cursor:pointer}
+    button:hover{opacity:.95}
+
+    /* ====== FOOTER ====== */
+    footer{margin-top:24px;padding:18px;text-align:center;color:#4b6b82;font-size:14px}
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width:900px){
+      .grid-3{grid-template-columns:1fr}
+      .safety-grid{grid-template-columns:1fr}
+      .nav{flex-direction:column;gap:12px;align-items:flex-start}
+      .hero{grid-template-columns:1fr}
+      .fleet{flex-direction:column}
+    }
+
+    /* RTL small helpers */
+    .ltr{direction:ltr;text-align:left}
+    .badge{display:inline-block;background:#e6f6ff;color:#0c4968;padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo"><FT>FT</FT></div>
+        <div>
+          <div style="font-weight:700">Fly_To</div>
+          <div style="font-size:12px;opacity:.9">شركة طيران Fly_To — سلامتك أولويتنا، ووجهتك هدفنا.</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#about">عن الشركة</a></li>
+          <li><a href="#safety">السلامة</a></li>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#fleet">الأسطول</a></li>
+          <li><a href="#contact">تواصل</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div>
+        <div class="title">مرحباً بك في Fly_To – حيث تجتمع السلامة مع الراحة في كل رحلة</div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 style="margin-bottom:15px">عن Fly_To</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>رؤيتنا</h3>
+          <p class="muted">نهدف لأن نكون شركة طيران مبتكرة تضع سلامة المسافرين والعاملين في المقام الأول، مع خدمات مريحة.</p>
+        </div>
+              <h2 style="margin-bottom:15px"> </h2>
+
+        <div class="card">
+          <h3>مهمتنا</h3>
+          <p class="muted">تقديم رحلات آمنة، موثوقة، وتجربة ركاب مميّزة من خلال سياسات واضحة وإجراءات مُحكمة.</p>
+        </div>
+      
+      </div>
+    </section>
+    
+     <section id="safety">
+  <h2 style="margin-bottom:12px">Safety Management</h2>
+  <p class="muted" style="margin-bottom:12px">اضغط على أي عنصر لعرض محتواه.</p>
+
+  <style>
+    .accordion-item{
+      background:#fff;
+      border-radius:10px;
+      margin-bottom:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.06);
+      overflow:hidden;
+    }
+    .accordion-label{
+      display:block;
+      padding:14px;
+      background:#0c3b66;
+      color:#fff;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .accordion-content{
+      padding:14px;
+      display:none;
+      background:#f8fbff;
+      color:#27465a;
+      line-height:1.6;
+      font-size:14px;
+    }
+    /* checkbox hack */
+    input[type=checkbox]{display:none}
+    input[type=checkbox]:checked ~ .accordion-content{
+      display:block;
+    }
+  </style>
+
+  <!-- 1) Safety Policy -->
+  <div class="accordion-item">
+    <div> 
+           <a class="cta" href="#safety">اطّلع على سياسات السلامة</a>
+
+</div>
+    <label class="accordion-label" for="acc1">1) سياسة السلامة (Safety Policy)</label>
+    <input type="checkbox" id="acc1">
+    <div class="accordion-content">
+      <p>Fly_To Airline affirms its strong dedication to upholding the highest levels of aviation safety across all operations.
+Our Safety Management System (SMS) provides a structured framework that supports effective hazard detection, risk assessment, and the development of a proactive safety culture throughout the organization. Every employee, contractor, and partner is expected to adhere to these principles and contribute to a safe working environment.
+<br>Our commitments include:<br>
+•	Maintaining full compliance with ICAO Annex 19 requirements, national regulatory frameworks, and recognized international standards.
+<br>•	Supplying the workforce with the tools, training, and resources needed to effectively implement and continuously strengthen the SMS.
+<br>•	Fostering an open-reporting culture where safety concerns can be raised confidently and without fear of blame or disciplinary action.
+<br>•	Setting clear, measurable safety objectives and conducting routine reviews of performance indicators to ensure ongoing improvement.
+<br>•	Supporting continuous learning through transparent communication, targeted training, and awareness initiatives that reinforce safety values.
+<br>•	Ensuring that all risk-reduction strategies are practical, effective, and integrated seamlessly into everyday operational procedures.
+<br>
+ At Fly_To Airline, safety is a shared duty. Through collaboration, accountability, and consistent application of safety principles, we aim to ensure that all activities are performed with the highest level of safety, efficiency, and operational integrity.
+</p>
+      <p><strong>Arabic</strong> تؤكد شركة فلاي تو للطيران التزامها الراسخ بالحفاظ على أعلى مستويات سلامة الطيران في جميع عملياتها. يوفر نظام إدارة السلامة لدينا إطارًا منظمًا يدعم الكشف الفعال عن المخاطر وتقييمها، ويساهم في بناء ثقافة سلامة استباقية في جميع أنحاء الشركة. يُتوقع من كل موظف ومتعاقد وشريك الالتزام بهذه المبادئ والمساهمة في بيئة عمل آمنة.
+      تشمل التزاماتنا ما يلي:<br>
+• الالتزام التام بمتطلبات الملحق 19 من منظمة الطيران المدني الدولي (ICAO)، والأطر التنظيمية الوطنية، والمعايير الدولية المعترف بها.<br>
+• تزويد القوى العاملة بالأدوات والتدريب والموارد اللازمة لتطبيق نظام إدارة السلامة بفعالية وتعزيزه باستمرار <br>
+• تعزيز ثقافة الإبلاغ المفتوح، حيث يُمكن التعبير عن مخاوف السلامة بثقة ودون خوف من اللوم أو الإجراءات التأديبية.<br>
+• وضع أهداف سلامة واضحة وقابلة للقياس، وإجراء مراجعات دورية لمؤشرات الأداء لضمان التحسين المستمر.<br>
+• دعم التعلم المستمر من خلال التواصل الشفاف، والتدريب المُوجَّه، ومبادرات التوعية التي تُعزز قيم السلامة.<br>
+• ضمان أن تكون جميع استراتيجيات الحد من المخاطر عملية وفعّالة، ومتكاملة بسلاسة في الإجراءات التشغيلية اليومية.<br>
+<br>
+في شركة فلاي تو للطيران، السلامة مسؤولية مشتركة. من خلال التعاون والمساءلة والتطبيق المتواصل لمبادئ السلامة، نهدف إلى ضمان تنفيذ جميع أنشطتنا بأعلى مستويات السلامة والكفاءة والنزاهة التشغيلية.</p>
+    </div>
+  </div>
+
+  <!-- 2) Safety Risk Management -->
+  <div class="accordion-item">
+    <label class="accordion-label" for="acc2">2) إدارة مخاطر السلامة (SRM)</label>
+    <input type="checkbox" id="acc2">
+    <div class="accordion-content">
+      <p>عملية تحليل المخاطر وتقييمها ووضع إجراءات للحد منها قبل تأثيرها على العمليات.</p>
+      <p><strong></strong> سجلات مخاطرة، تقييم تأثير/احتمال، متابعة فعالية الإجراءات.</p>
+    </div>
+  </div>
+
+<h3 style="margin:10px 0 6px;color:#0c3b66">جدول تحديد المخاطر (Hazard Identification)</h3>
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+  <tr style="background:#0c3b66;color:#fff">
+    <th style="padding:8px;border:1px solid #dbe7f3">الخطر</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">الأسباب</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">النتائج</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">مثال</th>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">ميكانيكي / تقني</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">عطل محرك – صيانة ضعيفة</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">توقف الرحلة – حوادث</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">خلل 737 MAX</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">بشري / تشغيلي</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">خطأ طيار – إجهاد – تدريب ضعيف</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">حوادث – خسائر تشغيلية</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">خطأ تقدير أثناء الهبوط</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">طقس / بيئة</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">ضباب – رياح – عواصف</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">تأخيرات – صعوبة هبوط</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">إغلاق هيثرو بسبب الضباب</td>
+  </tr>
+
+</table>
+<h3 style="margin:14px 0 6px;color:#0c3b66">جدول شدة الخطر (Severity)</h3>
+
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+  <tr style="background:#0c3b66;color:#fff">
+    <th style="padding:8px;border:1px solid #dbe7f3">المستوى</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">الوصف</th>
+  </tr>
+
+  <tr><td style="padding:8px;border:1px solid #dbe7f3">1 – Minor</td><td style="padding:8px;border:1px solid #dbe7f3">تأثير بسيط</td></tr>
+  <tr><td style="padding:8px;border:1px solid #dbe7f3">2 – Moderate</td><td style="padding:8px;border:1px solid #dbe7f3">أضرار محدودة</td></tr>
+  <tr><td style="padding:8px;border:1px solid #dbe7f3">3 – Significant</td><td style="padding:8px;border:1px solid #dbe7f3">تعطّل تشغيلي</td></tr>
+  <tr><td style="padding:8px;border:1px solid #dbe7f3">4 – Serious</td><td style="padding:8px;border:1px solid #dbe7f3">إصابات</td></tr>
+  <tr><td style="padding:8px;border:1px solid #dbe7f3">5 – Catastrophic</td><td style="padding:8px;border:1px solid #dbe7f3">وفيات / فقدان طائرة</td></tr>
+</table>
+
+<h3 style="margin:14px 0 6px;color:#0c3b66">جدول احتمالية الخطر (Likelihood)</h3>
+
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+  <tr style="background:#0c3b66;color:#fff">
+    <th style="padding:8px;border:1px solid #dbe7f3">المستوى</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">الوصف</th>
+  </tr>
+
+  <tr><td style="padding:8px;border:1px solid #dbe7f3">1 – Rare</td><td style="padding:8px;border:1px solid #dbe7f3">نادر جداً</td></tr>
+  <tr><td style="padding:8px;border:1px solid #dbe7f3">2 – Unlikely</td><td style="padding:8px;border:1px solid #dbe7f3">غير محتمل</td></tr>
+  <tr><td style="padding:8px;border:1px solid #dbe7f3">3 – Possible</td><td style="padding:8px;border:1px solid #dbe7f3">ممكن</td></tr>
+  <tr><td style="padding:8px;border:1px solid #dbe7f3">4 – Likely</td><td style="padding:8px;border:1px solid #dbe7f3">محتمل</td></tr>
+  <tr><td style="padding:8px;border:1px solid #dbe7f3">5 – Frequent</td><td style="padding:8px;border:1px solid #dbe7f3">يحدث باستمرار</td></tr>
+</table>
+<h3 style="margin:14px 0 6px;color:#0c3b66">مصفوفة المخاطر (5×5)</h3>
+
+<table style="width:100%;border-collapse:collapse;font-size:13px;text-align:center">
+  <tr style="background:#0c3b66;color:#fff">
+    <th>S\L</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+  </tr>
+
+  <tr><td>5</td><td>5</td><td>10</td><td>15</td><td>20</td><td>25</td></tr>
+  <tr><td>4</td><td>4</td><td>8</td><td>12</td><td>16</td><td>20</td></tr>
+  <tr><td>3</td><td>3</td><td>6</td><td>9</td><td>12</td><td>15</td></tr>
+  <tr><td>2</td><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td></tr>
+  <tr><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+</table>
+
+<h3 style="margin:14px 0 6px;color:#0c3b66">تصنيف مستوى الخطر</h3>
+
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+  <tr style="background:#0c3b66;color:#fff">
+    <th>المدى</th><th>المستوى</th><th>الإجراء</th>
+  </tr>
+
+  <tr><td>1–5</td><td>Low</td><td>متابعة روتينية</td></tr>
+  <tr><td>6–10</td><td>Medium</td><td>إجراءات احترازية</td></tr>
+  <tr><td>12–15</td><td>High</td><td>إخطار الإدارة العليا</td></tr>
+  <tr><td>16–25</td><td>Extreme</td><td>وقف التشغيل فوراً</td></tr>
+</table>
+<h3 style="margin:14px 0 6px;color:#0c3b66">قبول / رفض الخطر</h3>
+
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+  <tr style="background:#0c3b66;color:#fff">
+    <th>المستوى</th><th>المعنى</th><th>الإجراء</th>
+  </tr>
+
+  <tr><td>Low</td><td>مقبول</td><td>متابعة عادية</td></tr>
+  <tr><td>Medium</td><td>مقبول مع تخفيف</td><td>موافقة مدير السلامة</td></tr>
+  <tr><td>High</td><td>غير مفضل</td><td>تصعيد لرئيس السلامة</td></tr>
+  <tr><td>Extreme</td><td>غير مقبول</td><td>وقف التشغيل فوراً</td></tr>
+</table>
+<br>
+  <!-- 3) Safety Assurance -->
+  <div class="accordion-item">
+    <label class="accordion-label" for="acc3">3) ضمان السلامة (Safety Assurance)</label>
+    <input type="checkbox" id="acc3">
+    <div class="accordion-content">
+      <p>Air_To Airline operates a comprehensive Safety Assurance program to ensure the ongoing effectiveness of its Safety Management System (SMS) across all flight and operational activities.
+The Safety Department continuously monitors Safety Performance Indicators (SPIs) across critical airline functions, including flight operations, aircraft maintenance, crew management, ground handling, and in-flight services.<br>
+Regular safety audits, compliance checks, and trend analyses are conducted to verify adherence to internal procedures and regulatory requirements, while identifying areas for improvement.<br>
+All incidents are thoroughly investigated to determine root causes, and corrective and preventive actions are implemented. Safety reports and identified hazards are tracked to resolution within 30 days, ensuring accountability and timely mitigation.
+The findings from audits, reviews, and investigations are presented during quarterly safety meetings and communicated to senior management, supporting informed, data-driven decisions.<br>
+Through this continuous process of monitoring, evaluation, feedback, and improvement, Air_To Airline ensures that safety remains the cornerstone of all operations and a core value embedded in every department.<br>
+</p>
+      <p><strong>Arabic</strong> تطبق شركة طيران Air_To برنامجًا شاملاً لضمان السلامة لضمان الفعالية المستمرة لنظام إدارة السلامة (SMS) الخاص بها عبر جميع أنشطة الرحلات والتشغيل.
+      <br> 
+    يقوم قسم السلامة بمراقبة مؤشرات أداء السلامة (SPIs) بشكل مستمر عبر وظائف الطيران المهمة، بما في ذلك عمليات الطيران، وصيانة الطائرات، وإدارة الطاقم، والمناولة الأرضية، والخدمات أثناء الرحلة
+  <br>
+يتم إجراء عمليات تدقيق السلامة والتحقق من الامتثال وتحليل الاتجاهات بشكل منتظم للتحقق من الالتزام بالإجراءات الداخلية والمتطلبات التنظيمية، مع تحديد مجالات التحسين
+<br>
+يتم التحقيق في جميع الحوادث بدقة لتحديد الأسباب الجذرية، وتُتخذ الإجراءات التصحيحية والوقائية. ويتم تتبع تقارير السلامة والمخاطر المُحددة حتى يتم حلها في غضون 30 يومًا، مما يضمن المساءلة والتخفيف في الوقت المناسب.
+<br>
+يتم عرض النتائج من عمليات التدقيق والمراجعة والتحقيقات خلال اجتماعات السلامة الفصلية وإبلاغها إلى الإدارة العليا، مما يدعم القرارات المستنيرة القائمة على البيانات.
+<br>
+Through this continuous process of monitoring, evaluation, feedback, and improvement, Air_To Airline ensures that safety remains the cornerstone of all operations and a core value embedded in every department.</p>
+      <br>
+  
+      <h3 style="margin:14px 0 6px;color:#0c3b66">أنشطة ضمان السلامة (Safety Assurance)</h3>
+
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+  <tr style="background:#0c3b66;color:#fff;text-align:center">
+    <th style="padding:8px;border:1px solid #dbe7f3">النشاط</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">الهدف</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">التكرار</th>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">مراجعات تشغيلية</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">التحقق من الالتزام بالإجراءات التشغيلية</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">ربع سنوي</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">تدقيقات SMS</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">تقييم فعالية نظام إدارة السلامة</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">سنوي</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">تدقيقات المتعاقدين</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">ضمان التزام مقدمي الخدمات بمعايير السلامة</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">نصف سنوي</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">مراقبة الاتجاهات التشغيلية</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">تحليل التكرار والأنماط لتحديد المخاطر</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">شهري</td>
+  </tr>
+</table>
+
+<h3 style="margin:14px 0 6px;color:#0c3b66">مؤشرات أداء السلامة (SPIs)</h3>
+
+<table style="width:100%;border-collapse:collapse;font-size:13px;text-align:center">
+  <tr style="background:#0c3b66;color:#fff">
+    <th style="padding:8px;border:1px solid #dbe7f3">المؤشر</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">الوصف</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">الهدف</th>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">معدلات الحوادث</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">عدد الحوادث لكل 10,000 ساعة طيران</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">انخفاض بنسبة 10%</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">تقارير المخاطر</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">عدد تقارير العاملين للمخاطر</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">زيادة بنسبة 20%</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">الحوادث القريبة (Near Misses)</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">مراقبة الأخطاء التي لم تؤدِ لحادث</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">تحسين بنسبة 15%</td>
+  </tr>
+</table>
+
+    </div>
+  </div>
+
+  <!-- 4) Safety Promotion -->
+  <div class="accordion-item">
+    <label class="accordion-label" for="acc4">4) ترويج السلامة (Safety Promotion)</label>
+    <input type="checkbox" id="acc4">
+    <div class="accordion-content">
+      <p>Air_To Airline fosters a strong and proactive safety culture through continuous education, transparent communication, and active employee engagement.<br>
+All airline personnel, including flight crews, maintenance teams, and ground staff, receive initial and recurrent safety training to ensure they remain competent, up-to-date, and fully aware of operational safety requirements across all airline operations.<br>
+Air_To maintains an open and non-punitive safety reporting system, allowing employees, contractors, and partners to report hazards, incidents, and near-misses without fear of reprisal.<br>
+Regular safety bulletins, team briefings, and Safety Awareness campaigns are used to share lessons learned, highlight recent safety achievements, and encourage proactive behavior throughout the organization.<br>
+A Safety Recognition Program acknowledges individuals and teams who make outstanding contributions to improving safety performance across the airline.<br>
+Through these continuous initiatives, Air_To ensures that safety awareness is actively promoted, widely shared, and deeply embedded as a core value within the company.<br>
+</p>
+      <p><strong>ِArabic</strong> تعمل شركة Air_To Airline على تعزيز ثقافة السلامة القوية والاستباقية من خلال التعليم المستمر والتواصل الشفاف والمشاركة النشطة للموظفين
+      <br>
+    يتلقى جميع موظفي الخطوط الجوية، بما في ذلك أطقم الطيران وفرق الصيانة والموظفين الأرضيين، تدريبًا أوليًا ومتكررًا في مجال السلامة لضمان بقائهم أكفاء ومواكبين لآخر المستجدات ووعيهم الكامل بمتطلبات السلامة التشغيلية في جميع عمليات الخطوط الجوية.
+  <br>
+تحافظ شركة Air_To على نظام إبلاغ مفتوح وغير عقابي بشأن السلامة، مما يسمح للموظفين والمقاولين والشركاء بالإبلاغ عن المخاطر والحوادث والحوادث التي كادت أن تقع دون خوف من أي إجراءات انتقامية. وتُستخدم نشرات السلامة الدورية، وإحاطات الفريق، وحملات التوعية بالسلامة لمشاركة الدروس المستفادة، وتسليط الضوء على أحدث إنجازات السلامة، وتشجيع السلوك الاستباقي في جميع أنحاء المؤسسة.
+<br>
+يُقدّر برنامج تقدير السلامة الأفراد والفرق الذين يُقدمون مساهماتٍ بارزة في تحسين أداء السلامة على مستوى شركة الطيران.
+<br>
+ومن خلال هذه المبادرات المتواصلة، تضمن Air_To تعزيز الوعي بالسلامة بشكلٍ فعّال، ونشره على نطاقٍ واسع، وترسيخه كقيمةٍ أساسيةٍ في الشركة.</p>
+    </div>
+    <br>
+    <input type="checkbox" id="acc4">
+    <div class="accordion-content">
+    <h3 style="margin:14px 0 6px;color:#0c3b66">برامج الترويج للسلامة (Safety Promotion)</h3>
+
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+  <tr style="background:#0c3b66;color:#fff;text-align:center">
+    <th style="padding:8px;border:1px solid #dbe7f3">البرنامج</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">الهدف</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">النتيجة المتوقعة</th>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">ورش عمل تدريبية</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">رفع مستوى الوعي لدى العاملين</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">تحسين المعرفة التشغيلية</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">نشرات دورية</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">مشاركة دروس مستفادة</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">تقليل الأخطاء التشغيلية</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">أسبوع التوعية بالسلامة</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">تحفيز ثقافة السلامة</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">زيادة المشاركة الفعّالة</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">جوائز التميز</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">تحفيز العاملين الملتزمين بالسلامة</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">رفع الروح المعنوية</td>
+  </tr>
+</table>
+<br>
+<h3 style="margin:14px 0 6px;color:#0c3b66">التدريب والكفاءة المهنية</h3>
+
+<table style="width:100%;border-collapse:collapse;font-size:13px">
+  <tr style="background:#0c3b66;color:#fff;text-align:center">
+    <th style="padding:8px;border:1px solid #dbe7f3">نوع التدريب</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">الفئة المستهدفة</th>
+    <th style="padding:8px;border:1px solid #dbe7f3">الفترة</th>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">تدريب SMS الأساسي</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">جميع الموظفين الجدد</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">عند التعيين</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">تدريب تحليل المخاطر</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">إدارة السلامة والعمليات</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">سنوي</td>
+  </tr>
+
+  <tr>
+    <td style="padding:8px;border:1px solid #dbe7f3">تدريب الحوادث القريبة</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">الطاقم الجوي</td>
+    <td style="padding:8px;border:1px solid #dbe7f3">كل 6 أشهر</td>
+  </tr>
+
+</table>
+
+  </div>
+
+</section>
+
+
+    <section id="services">
+      <h2 style="margin-bottom:12px">خدماتنا</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>حجوزات الرحلات</h3>
+          <p class="muted">نموذج حجز مبسط عبر الموقع، خيارات مقاعد وحقائب، وتأكيد فوري عبر الإيميل.</p>
+        </div>
+        <div class="card">
+          <h3>تأمين الركاب (Insurance)</h3>
+          <p class="muted">باقة تأمين اختيارية للرحلات تشمل تعويض الأمتعة والتأخر وحالات الطوارئ الطبية.</p>
+        </div>
+        <div class="card">
+          <h3>بروموشن وعروض (Promotions)</h3>
+          <p class="muted">خصومات دورية، عروض لمجموعات، وبرامج ولاء للمسافرين المتكررّين.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLEET -->
+    <section id="fleet">
+      <h2 style="margin-bottom:12px">الأسطول</h2>
+      <div class="fleet">
+        <div class="plane">
+          <h4>Airbus A320 (نموذج)</h4>
+          <p class="muted">سعة 150 راكب — مثالي للرحلات القصيرة والمتوسطة.</p>
+        </div>
+        <div class="plane">
+          <h4>Boeing 787 Dreamliner (نموذج)</h4>
+          <p class="muted">سعة 250 راكب — للرحلات الطويلة براحة عالية.</p>
+        </div>
+        <div class="plane">
+          <h4>طائرات حكومية صغيرة (نموذج)</h4>
+          <p class="muted">لخدمات الشحن والرحلات الخاصة.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 style="margin-bottom:12px">تواصل معنا</h2>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:18px">
+        <div>
+          <p class="muted">لو عندك استفسار عن السياسات، الشكاوى، أو تفاصيل عن التأمين، ابعتيلي رسالة.</p>
+          <form action="#" method="post" onsubmit="return false;">
+            <label>الاسم</label>
+            <input type="text" name="name" placeholder="اسمك" required>
+            <label>البريد الإلكتروني</label>
+            <input type="email" name="email" placeholder="email@example.com" required>
+            <label>الموضوع</label>
+            <select name="topic" aria-label="topic">
+              <option>استعلام عن حجز</option>
+              <option>سياسة السلامة</option>
+              <option>تأمين</option>
+              <option>شكاوى</option>
+            </select>
+            <label>الرسالة</label>
+            <textarea name="message" rows="5" placeholder="اكتب رسالتك هنا"></textarea>
+            <div style="display:flex;gap:8px;align-items:center;margin-top:6px">
+              <button type="submit">أرسل</button>
+              <span class="badge">ملاحظة: نموذج تجريبي</span>
+            </div>
+          </form>
+        </div>
+
+        <aside style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(12,59,102,0.06)">
+          <h4>معلومات الاتصال</h4>
+          <p class="muted">العنوان: القاهرة — مصر</p>
+          <p class="muted">هاتف: 01508707262</p>
+          <p class="muted">ايميل: info@flynova.com</p>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Fly_To.
+    </footer>
+  </main>
+</body>
+</html>                                             
+
+
+
+
+
+
+
+
+
+
